@@ -67,7 +67,7 @@ https://downloads.marketplace.jetbrains.com/files/17718/654597/github-copilot-in
 https://downloads.marketplace.jetbrains.com/files/17718/654597/github-copilot-intellij-1.5.30-242.zip
 ```
 
-在 Actions 页面点击运行工作流程，分别填入“文件下载链接”、“发行版标签”、“发行版标题”，点击运行即可（需提前设置仓库机密，否则报`403`）
+在 Actions 页面点击运行工作流程，分别填入“文件下载链接”、“发行版标签”、“发行版标题”，点击运行即可（需提前设置 Actions 写入仓库权限）
 
 ### 贡献指南
 欢迎任何形式的贡献！您可以通过以下方式参与：
