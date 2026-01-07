@@ -70,8 +70,8 @@ jobs:
 
     - name: 创建 GitHub 发行版并上传文件
       uses: softprops/action-gh-release@v2
-      env:
-        GITHUB_TOKEN: ${{ secrets.ACTION_TOKEN }}
+      #env:
+      #  GITHUB_TOKEN: ${{ secrets.ACTION_TOKEN }}
       with:
         tag_name: ${{ github.event.inputs.release_tag }}
         name: ${{ github.event.inputs.release_title }}
