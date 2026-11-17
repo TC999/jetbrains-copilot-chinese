@@ -1,0 +1,16 @@
+# IDE
+.idea/
+
+# 内部执行计划与文档
+.opencoding/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# 本地汉化中间产物（README「在本地汉化」流程生成）
+/core/
+/core.jar
+/github-copilot-intellij/
+/string.json
+/*.zip

@@ -12,15 +12,15 @@ JetBrains 系 GitHub Copilot 插件自制汉化包，旨在为 JetBrains 开发�
 ![汉化示例](https://github.com/user-attachments/assets/7ef41df6-e609-45d4-aca4-302aabfb95a3)
 
 
-1. 使用方法
-2. 安装指南
-3. 使用说明
-4. 贡献指南
-5. 许可证
+- [使用方法](#使用方法)
+- [在本地汉化](#在本地汉化)
+- [GitHub Actions（推荐）](#github-actions推荐)
+- [贡献指南](#贡献指南)
+- [许可证](#许可证)
 
 ### 使用方法
 
-1. 从发行版下载对应版本的插件包（已汉化好
+1. 从发行版下载对应版本的插件包（已汉化好）
 2. 打开 JetBrains 系 IDE，点击右上角齿轮图标 ---> “已安装”右侧齿轮 ---> 从磁盘安装插件，选择刚下载的压缩包即可。
 
 ### 在本地汉化
@@ -33,25 +33,19 @@ JetBrains 系 GitHub Copilot 插件自制汉化包，旨在为 JetBrains 开发�
     git clone https://github.com/TC999/jetbrains-copilot-chinese.git
     ```
     
-3. 进入项目目录：
+2. 进入项目目录：
    
     ```
     cd jetbrains-copilot-chinese
     ```
     
-4. 安装依赖：
-   
-    ```
-    pip install -r requirements.txt
-    ```
-    
-5. 从[JetBrains插件市场](https://plugins.jetbrains.com/plugin/17718-github-copilot/versions)下载原版插件包
-6. 打开压缩包，并将其中的`lib/core.jar`解压到项目根目录
-7. 解压`core.jar`所有内容到`core`文件夹下（右键选择“解压到`core`”)
-8. 直接替换：运行`2.replace.py`即可，无需运行`1.extract.py`（提取源词条的脚本
-9. 将根目录`copilot.properties`替换到`core/copilot`下，将`core`中所有的文件直接塞回`core.jar`，再将其塞回原版插件包，汉化成功
+3. 从[JetBrains插件市场](https://plugins.jetbrains.com/plugin/17718-github-copilot/versions)下载原版插件包
+4. 打开压缩包，并将其中的`lib/core.jar`解压到项目根目录
+5. 解压`core.jar`所有内容到`core`文件夹下（右键选择“解压到`core`”)
+6. 直接替换：运行`2.replace.py`即可，无需运行`1.extract.py`（提取源词条的脚本）
+7. 将根目录`copilot.properties`替换到`core/copilot`下，将`core`中所有的文件直接塞回`core.jar`，再将其塞回原版插件包，汉化成功
 
-### GitHub Actions（推荐
+### GitHub Actions（推荐）
 1. 复刻此仓库
 2. 允许运行工作流程
 3. 打开[JetBrains插件市场](https://plugins.jetbrains.com/plugin/17718-github-copilot/versions)，找到对应版本点击下载，复制下载时显示的链接，然后这样修改

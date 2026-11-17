@@ -13,22 +13,25 @@ on:
         description: '发行版标题'
         required: true
 
+permissions:
+  contents: write
+
 jobs:
   replace:
     runs-on: ubuntu-latest
 
     steps:
     - name: 初始化仓库
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: 设置 Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v5
       with:
         python-version: '3.x'
 
     - name: 下载文件并重命名为 copilot.zip
       run:
-        curl ${{ github.event.inputs.download_link }} -o copilot.zip
+        curl -fL "${{ github.event.inputs.download_link }}" -o copilot.zip
 
     - name: 解压 copilot.zip 到当前文件夹
       run: |
