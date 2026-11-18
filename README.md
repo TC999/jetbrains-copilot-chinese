@@ -23,6 +23,20 @@ JetBrains 系 GitHub Copilot 插件自制汉化包，旨在为 JetBrains 开发�
 1. 从发行版下载对应版本的插件包（已汉化好）
 2. 打开 JetBrains 系 IDE，点击右上角齿轮图标 ---> “已安装”右侧齿轮 ---> 从磁盘安装插件，选择刚下载的压缩包即可。
 
+### 一键部署（Windows x64）
+
+如果本机已经安装了 GitHub Copilot 插件，可以直接用仓库内的脚本汉化，无需下载发行版：
+
+1. 克隆仓库
+2. 完全关闭所有 JetBrains IDE（IntelliJ、PyCharm、WebStorm、GoLand 等）
+3. 双击 `deploy\install.cmd`
+4. 确认处理计划，脚本会自动扫描并汉化所有已安装的 Copilot 插件
+5. 启动 IDE
+
+回滚：运行 `deploy\install.cmd -Restore`，或备份目录下的 `restore.cmd`。
+
+脚本兼容旧版 `lib/core.jar` 和新版 `lib/modules/*.jar` 结构，以已安装插件的资源为底合并译文，不会丢失新版新增键。需要 Windows 10/11 x64 + PowerShell 5.1+。详细参数见 [deploy/README.md](deploy/README.md)。
+
 ### 在本地汉化
 
 首先你需要安装 Python
